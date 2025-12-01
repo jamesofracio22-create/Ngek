@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>heyheheye</title>
+
+<style>
+
+.grid-content{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 15px;
+  width: 700px;
+  height: 700px;
+}
+
+.box {
+  background: white;
+  border: 3px solid black;
+}
+
+
+.box:nth-child(1){
+  grid-column: span 5;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: stretch;
+}
+
+.inner-long {
+  flex: 3; 
+  border: 3px solid black;
+  background: pink;
+}
+
+.inner-small {
+  flex: 2;  
+  border: 3px solid black;
+  background: pink;
+}
+
+.inner-smaller {
+  flex: 1;
+  border: 3px solid black;
+  background: pink;
+}
+
+.box:nth-child(n+2){
+  background: yellow;
+}
+.box:nth-child(2){ 
+ grid-column: span 2;
+  }
+
+.box:nth-child(3){
+   grid-row: span 3; 
+   }
+
+.box:nth-child(4){ 
+  grid-column: span 2; 
+ }
+
+.box:nth-child(5){
+grid-column: span 2;
+ }
+
+.box:nth-child(6){ 
+  grid-column: span 2;
+ }
+
+.box:nth-child(7){
+grid-column: span 2;
+  }
+
+.box:nth-child(8){
+   grid-column: span 2; 
+   }
+
+</style>
+</head>
+
+<body>
+<div class="grid-content">
+
+  <div class="box">
+      <div class="inner-long"></div>
+      <div class="inner-small"></div>
+      <div class="inner-smaller"></div>
+  </div>
+
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+
+</div>
+</body>
+</html>
